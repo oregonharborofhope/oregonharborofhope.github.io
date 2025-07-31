@@ -1,0 +1,113 @@
+.header {
+  margin: 0;
+  background: url('../static/images/OHOH_hero_image_1.png') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+}
+.overlay {
+  background: rgba(0, 20, 30, 0.45);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0; left: 0;
+  z-index: 1;
+}
+
+.overlay {
+    position: fixed;    /* Always covers viewport */
+    inset: 0;           /* top: 0; right: 0; bottom: 0; left: 0; shorthand */
+    background: rgba(0, 20, 30, 0.45);
+    z-index: 1;
+    pointer-events: none; /* Overlay is visual only */
+}
+
+header {
+  /* position: relative; */
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 48px 0 48px;
+}
+.logo svg {
+  height: 48px;
+  width: auto;
+  vertical-align: middle;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+nav a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  margin: 0 8px;
+  transition: color 0.2s;
+}
+nav a:last-child {
+  margin-right: 0;
+}
+
+svg a g,
+svg a path {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+svg a:hover g,
+svg a:hover path {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+}
+
+
+
+.nav-divider {
+  color: var(--accent-color);
+  margin: 0 8px;
+  font-weight: normal;
+}
+nav svg {
+    width: 100%; /* Make the SVG take the full width of the nav */
+    height: auto; /* Maintain aspect ratio */
+    /* padding-left: 50px; */
+}
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  /* margin-left: 24px; */
+}
+.social-icons a svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--accent-color);
+  transition: fill 0.2s;
+}
+.social-icons a:hover svg {
+  fill: var(--text-color);
+}
+/* .close-icon {
+  margin-left: 24px;
+  cursor: pointer;
+}
+.close-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--accent-color);
+} */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 16px 0 16px;
+  }
+  nav, .social-icons {
+    margin-top: 12px;
+  }
+}

@@ -1,0 +1,272 @@
+/* Footer Container */
+.footer {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--primary-font-family);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 10px 60px;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Columns with proportional widths */
+.footer-column.col-30 {
+  flex: 0 0 30%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.footer-column.col-20 {
+  flex: 0 0 20%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.footer-column.col-50 {
+  flex: 0 0 50%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+@media (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px; /* ← This was missing the unit "px" */
+    align-items: center; /* Center columns themselves if needed */
+  }
+
+  .footer-column {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 10px 0;
+    text-align: center; /* ← Center text content */
+    display: flex;             /* Optional: helps align inner content */
+    flex-direction: column;    /* Stack children vertically */
+    align-items: center;       /* Center content horizontally */
+  }
+}
+
+/* Footer Content Styles */
+.footer-column h3 {
+  font-size: 18px;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.footer-column p {
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.donate-button {
+  margin-top: 20px;
+  background-color: var(--accent-color);
+  color: var(--donate-button-text-color);
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  padding: 12px 2em;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--primary-font-family);
+}
+
+.donate-button:hover {
+    background-color: var(--hero-title-color);
+    color: var(--text-color);
+}
+
+.contact-section h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.contact-section p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.contact-section {
+  position: relative;
+  padding: 20px;
+}
+
+.contact-section::before,
+.contact-section::after {
+  content: "";
+  position: absolute;
+  transform: translateY(30px);
+  top: 0;
+  height: calc(100% + 25px); /* extend 20% below the element */
+  width: 1px;
+  background-color: var(--accent-color);
+}
+
+.contact-section::before {
+  left: 0; /* left vertical line */
+  width: 1.5px;
+}
+
+.contact-section::after {
+  right: 0; /* right vertical line */
+}
+
+.contact-us {
+  font-weight: bold;
+  color: var(--accent-color);
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.latest-posts h3 {
+  color: var(--accent-color);
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+  padding-left: 8px;
+}
+
+.posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.post {
+  background-color: var(--background-color);
+  /* border: 2px solid var(--accent-color); */
+  max-width: 120px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.post img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--accent-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+
+.post-caption {
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.post a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+#post-hr {
+    border-color: var(--accent-color);
+    margin: 20px 0;
+    border-top: none; 
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.social-icons i {
+  color: var(--accent-color);
+}
+
+@media (max-width: 900px) {
+  .latest-posts {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .posts-container {
+    justify-content: center; /* center posts within their container */
+  }
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  color: var(--accent-color);
+  text-decoration: none;
+  /* margin-left: 10px; */
+}
+
+#donate-column-text {
+    font-family: var(--secondary-font-family);
+    padding-top: 10px;
+}
+
+#donate-column-hr {
+  border-color: var(--accent-color);
+  margin: 20px auto;         /* auto horizontally centers the hr */
+  border-top: none;
+  border-bottom: 1px solid var(--accent-color); /* clearer intent */
+  width: 100%;               /* or a max-width like 300px */
+}
+
+#donate-cta-text {
+    color: var(--accent-color);
+    font-weight: bold;
+    font-family: var(--tertiary-font-family);
+}
+
+#contact-us-text {
+    font-family: var(--secondary-font-family);
+}
+
+/* Default styles for larger screens */
+#footer-logo > svg {
+  height: auto;
+  flex-shrink: 0;
+  padding-top: 85px;
+  width: 60%;
+}
+
+.social-icons svg g {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.social-icons a:hover g {
+  transform: scale(1.025);
+  filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--accent-color)
+}

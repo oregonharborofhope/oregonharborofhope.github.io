@@ -1,0 +1,15 @@
+:root {
+  --background-color: #1e3c54;
+  --secondary-background-color: #005F85;
+  --accent-color: #f9df00;
+  --text-color: #fff;
+  --hero-title-color: #FF7805;
+  --donate-button-text-color: black;
+  --primary-font-family: 'Albert Sans', sans-serif;
+  --secondary-font-family: 'EB Garamond', serif;
+  --tertiary-font-family: 'Sen', sans-serif;
+}
+
+body {
+  margin: 0;
+}

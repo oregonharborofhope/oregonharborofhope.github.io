@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OHOH - Contact</title>
+  <link rel="stylesheet" href="./static/css/root.css">
+  <link rel="stylesheet" href="./static/css/contact.css">
+  <link rel="stylesheet" href="./components/header.css">
+  <link rel="stylesheet" href="./components/footer.css">
+</head>
+<body class="contact">
+  <div class="header" include="./components/header.html"></div>
+  <main>
+    <section class="contact-form">
+      <h3>Contact Us</h3>
+      <p class="intro-text">
+          Thank you for helping make Portland the strongest, kindest and most supportive community we can be – for all citizens. 
+          If you are interested in an Educational Speaking Engagement or simply have a question, please submit the form below.
+      </p>
+
+      <div class="contact-info">
+          <h2 class="label">EMAIL:</h2>
+          <p class="email-address"><a href="mailto:office@oregonharborofhope.org">office@oregonharborofhope.org</a></p>
+      </div>
+
+      <h2 class="form-heading">SEND US A MESSAGE</h2>
+      <form class="message-form" action="#" method="post">
+          <div class="form-row">
+              <div class="form-group">
+                  <label for="name">NAME:</label>
+                  <input type="text" id="name" name="name" required placeholder="Enter your name">
+              </div>
+              <div class="form-group">
+                  <label for="email">EMAIL:</label>
+                  <input type="email" id="email" name="email" required placeholder="Enter your email">
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="subject">SUBJECT:</label>
+              <input type="text" id="subject" name="subject" required placeholder="Enter the subject">
+          </div>
+          <br>
+          <div class="form-group message-box">
+              <label for="message">MESSAGE:</label>
+              <textarea id="message" name="message" required placeholder="Type your message here..."></textarea>
+          </div>
+          <button type="submit" class="submit-button">Send</button>
+      </form>
+    </section>
+  </main>
+  <div class="footer" include="./components/footer.html"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.7.1/firebase-firestore-compat.js"></script>
+  <script src="./static/js/inject.js"></script>
+  <script src="./components/header.js" type="module"></script>
+  <script src="./static/js/contact.js"></script>
+  <script src="./components/footer.js" type="module"></script>
+</body>
+</html>
