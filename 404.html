@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Not Found</title>
+  <script>
+    // List the known valid slugs
+    const validPages = ["about", "contact", "programs", "news", "partners", "privacy", "resources"];
+    const path = window.location.pathname.replace(/^\/+|\/+$/g, "");
+    if (validPages.includes(path)) {
+      window.location.replace("/" + path + ".html");
+    }
+  </script>
+</head>
+<body>
+  <h1>404 – Page Not Found</h1>
+  <p>The page you are looking for does not exist.</p>
+  <a href="/">Return Home</a>
+</body>
+</html>
