@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://oregonharborofhope.org/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://oregonharborofhope.org/about.html</loc>
+  </url>
+
+  <url>
+    <loc>https://oregonharborofhope.org/contact.html</loc>
+  </url>
+
+  <url>
+    <loc>https://oregonharborofhope.org/news.html</loc>
+  </url>
+
+  <url>
+    <loc>https://oregonharborofhope.org/partners.html</loc>
+  </url>
+
+  <url>
+    <loc>https://oregonharborofhope.org/privacy.html</loc>
+  </url>
+
+  <url>
+    <loc>https://oregonharborofhope.org/programs.html</loc>
+  </url>
+
+  <url>
+    <loc>https://oregonharborofhope.org/resources.html</loc>
+  </url>
+</urlset>
