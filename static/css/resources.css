@@ -11,9 +11,9 @@ body, html {
 }
 
 body.resources .header {
-  background: url('../images/resources-banner-640w.png') no-repeat center center;
+  background: url('../images/resources-banner-1920w.png') no-repeat center center;
   background-size: cover;
-  background-attachment: fixed; 
+  background-attachment: scroll; 
   height: auto; /* or whatever height you want */
 }
 
