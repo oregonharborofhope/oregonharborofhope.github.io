@@ -170,16 +170,19 @@ svg a:hover path {
 #mission p {
   font-family: var(--secondary-font-family);
   font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+  letter-spacing: 0.02em;
   color: var(--text-color);
   margin: 0px;
   /* padding-top: 25px; */
   /* padding-bottom: 25px; */
-  padding-left: calc(10%);
-  padding-right: calc(10%);
+  padding-left: calc(20%);
+  padding-right: calc(20%);
 }
 
 #mission ul {
-  width: 50%;
+  width: 35%;
   margin: 0 auto;
   padding: 0;
   list-style-position: outside; /* ensure bullets hang outside */
@@ -189,12 +192,14 @@ svg a:hover path {
 }
 
 #mission li {
-  text-indent: 0em; /* indent negative by same value as padding-left for hanging effect */
-  padding-left: 0em; /* offset the negative indent to align text correctly */
+  text-indent: 0.5em; /* indent negative by same value as padding-left for hanging effect */
+  padding-left: 0.5em; /* offset the negative indent to align text correctly */
   margin: 0px;
   margin-bottom: 20px;
   font-family: var(--secondary-font-family);
   font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: 0.02em;
   color: var(--text-color);
 }
 
@@ -221,14 +226,16 @@ svg a:hover path {
 
 #prevention-and-outreach h2 {
   font-family: var(--primary-font-family);
-  font-size: 20px;
+  font-size: 22px;
   color: var(--accent-color);
   margin-top: 25px;
 }
 
 #prevention-and-outreach p {
   font-family: var(--secondary-font-family);
-  font-size: 20px;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  font-weight: normal;
   color: var(--text-color);
   margin: 0px;
   line-height: 1.5;
@@ -284,12 +291,13 @@ svg a:hover path {
 
 #approach p {
   font-family: var(--secondary-font-family);
-  font-size: 14px;
+  font-size: 18px;
+  letter-spacing: 0.03em;
   color: var(--text-color);
   margin: 0px;
-  padding-top: 25px;
-  padding-left: calc(10%);
-  padding-right: calc(10%);
+  padding-top: 10px;
+  padding-left: calc(5%);
+  padding-right: calc(5%);
 }
 
 .approach-grid {
@@ -317,7 +325,7 @@ svg a:hover path {
 }
 
 .approach-card h2 {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: bold;
   font-family: var(--primary-font-family);
   letter-spacing: 1px;
