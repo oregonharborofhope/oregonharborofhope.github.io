@@ -182,7 +182,7 @@ svg a:hover path {
 }
 
 #mission ul {
-  width: 35%;
+  width: 60%;
   margin: 0 auto;
   padding: 0;
   list-style-position: outside; /* ensure bullets hang outside */
@@ -197,9 +197,9 @@ svg a:hover path {
   margin: 0px;
   margin-bottom: 20px;
   font-family: var(--secondary-font-family);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.75;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   color: var(--text-color);
 }
 
@@ -382,6 +382,8 @@ svg a:hover path {
   padding-top: 0;
   padding-left: 0; /* remove unnecessary inner padding */
   font-size: 20px;
+  letter-spacing: .03em;
+
 }
 
 /* Button Container */
