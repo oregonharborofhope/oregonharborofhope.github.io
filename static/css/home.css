@@ -221,18 +221,19 @@ svg a:hover path {
 
 #prevention-and-outreach h2 {
   font-family: var(--primary-font-family);
-  font-size: 16px;
+  font-size: 20px;
   color: var(--accent-color);
   margin-top: 25px;
 }
 
 #prevention-and-outreach p {
   font-family: var(--secondary-font-family);
-  font-size: 14px;
+  font-size: 20px;
   color: var(--text-color);
   margin: 0px;
-  padding-left: calc(10%);
-  padding-right: calc(10%);
+  line-height: 1.5;
+  padding-left: calc(20%);
+  padding-right: calc(20%);
 }
 
 #outreach-text {
