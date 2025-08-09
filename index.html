@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -377,5 +378,75 @@
     <script src="./static/js/inject.js"></script>
     <script src="./components/header.js" type="module"></script>
     <script src="./components/footer.js" type="module"></script>
+    
+<!-- === Newsletter Modal (CM) === -->
+<div id="newsletterModal" class="modal" aria-hidden="true">
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+    <button class="close" aria-label="Close modal">&times;</button>
+
+    <div class="l-form-default">
+      <div class="cm-card">
+        <p id="modalHeading" class="cm-heading">Please subscibe to our news updates</p>
+
+        <!-- Your exact CM form (data-id + field names) -->
+        <form class="js-cm-form" id="subForm"
+              action="https://www.createsend.com/t/subscribeerror?description="
+              method="post"
+              data-id="2BE4EF332AA2E32596E38B640E9056191D8B2418D3532CCBED58BD0A8CF52BB6AFC557DF31F2588C656D1CEEB6C04D392256C716C7043C8B47D64B3A5970852A">
+          <div class="cm-field">
+            <label for="fieldName">Name</label>
+            <input id="fieldName" maxlength="200" name="cm-name" type="text" />
+          </div>
+
+          <div class="cm-field">
+            <label for="fieldEmail">Email <span aria-hidden="true" style="color:#d1362a">*</span></label>
+            <input autocomplete="email" id="fieldEmail" maxlength="200"
+                   name="cm-tltlst-tltlst" required type="email"
+                   class="js-cm-email-input qa-input-email" />
+          </div>
+
+          <button type="submit" class="js-cm-submit-button">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
+<script>
+  // Modal show/close
+  const modal = document.getElementById('newsletterModal');
+  const closeBtn = modal.querySelector('.close');
+
+  // Show once per session (optional – remove sessionStorage lines to show every load)
+  window.addEventListener('load', () => {
+    if (!sessionStorage.getItem('cmModalShown')) {
+      setTimeout(() => {
+        modal.classList.add('show');
+        modal.setAttribute('aria-hidden', 'false');
+        sessionStorage.setItem('cmModalShown', '1');
+      }, 100);
+    }
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden', 'true');
+  });
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('show');
+      modal.setAttribute('aria-hidden', 'true');
+    }
+  });
+
+  // Optional: open via a button somewhere on the page
+  // document.querySelector('#openNewsletter').addEventListener('click', () => {
+  //   modal.classList.add('show'); modal.setAttribute('aria-hidden','false');
+  // });
+</script>
+
+
 </body>
 </html>
