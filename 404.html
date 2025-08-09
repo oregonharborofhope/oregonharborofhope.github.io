@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Page Not Found</title>
-  <script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Error 404 — Page Not Found</title>
+
+  <!-- Albert Sans (weights used: 300, 600, 900) -->
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;600;900&display=swap" rel="stylesheet">
+
+   <script>
     // List the known valid slugs
     const validPages = ["about", "contact", "programs", "news", "partners", "privacy", "resources"];
     const path = window.location.pathname.replace(/^\/+|\/+$/g, "");
@@ -11,10 +16,91 @@
       window.location.replace("/" + path + ".html");
     }
   </script>
+  <style>
+    :root{
+      --bg:#005F85;      /* brand blue backdrop */
+      --yellow:#FFE500;  /* accent */
+      --sky:#5ACAF4;     /* secondary accent */
+      --white:#FFFFFF;
+    }
+
+    /* Page layout */
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--white);
+      font-family:"Albert Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      display:grid;
+      place-items:center;
+    }
+    .wrap{
+      text-align:center;
+      padding:40px 20px;
+      max-width:1200px;
+      width:100%;
+    }
+
+    /* Headline stack — exact sizes at desktop, fluid downwards */
+    .error{
+      font-weight:900;            /* Black */
+      color:var(--yellow);
+      font-size:clamp(56px, 14vw, 104px);
+      letter-spacing:0.02em;
+      line-height:0.95;
+      margin:0 0 24px 0;
+    }
+    .oops{
+      font-weight:600;            /* Semibold */
+      color:var(--white);
+      font-size:clamp(32px, 8vw, 80px);
+      line-height:1.05;
+      margin:0 0 16px 0;
+    }
+    .not-found{
+      font-weight:300;            /* Light */
+      color:var(--sky);
+      font-size:clamp(24px, 6.5vw, 64px);
+      line-height:1.1;
+      margin:0 0 16px 0;
+    }
+    .hint{
+      font-weight:300;            /* Light */
+      color:var(--white);
+      font-size:clamp(16px, 4.5vw, 48px);
+      line-height:1.15;
+      margin:8px 0 40px 0;
+    }
+
+    /* CTA button — 192×48, 24px radius, 16px semibold */
+    .cta{
+      display:inline-grid;
+      place-items:center;
+      width:192px;
+      height:48px;
+      background:var(--yellow);
+      color:#08324B;              /* readable on yellow */
+      text-decoration:none;
+      border-radius:24px;
+      font-weight:600;            /* Semibold */
+      font-size:16px;
+      line-height:1;
+      box-shadow:0 2px 0 rgba(0,0,0,.15);
+      transition:transform .06s ease, filter .2s ease;
+    }
+    .cta:focus-visible{outline:3px solid var(--sky); outline-offset:3px}
+    .cta:hover{filter:brightness(.95)}
+    .cta:active{transform:translateY(1px)}
+  </style>
 </head>
 <body>
-  <h1>404 – Page Not Found</h1>
-  <p>The page you are looking for does not exist.</p>
-  <a href="/">Return Home</a>
+  <main class="wrap" role="main" aria-labelledby="err-heading">
+    <h1 id="err-heading" class="error">Error 404</h1>
+    <p class="oops">OOPS!</p>
+    <p class="not-found">Page Not Found!</p>
+    <p class="hint">We can’t seem to locate the page you’re looking for.</p>
+
+    <a class="cta" href="/">Go Back Home</a>
+  </main>
 </body>
 </html>
