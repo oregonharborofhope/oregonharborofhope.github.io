@@ -378,6 +378,7 @@ svg a:hover path {
 #who-we-are .text-block p {
   color: var(--donate-button-text-color);
   font-family: var(--secondary-font-family);
+  line-height: 1.5em;
   margin: 0;
   padding-top: 0;
   padding-left: 0; /* remove unnecessary inner padding */
