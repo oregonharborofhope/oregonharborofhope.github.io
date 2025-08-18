@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Error 404 — Page Not Found</title>
 
+  <link rel="stylesheet" href="./static/css/root.css">
+  <link rel="stylesheet" href="./static/css/about.css">
+  <link rel="stylesheet" href="./components/header.css">
+  <link rel="stylesheet" href="./components/footer.css">
+
   <!-- Albert Sans (weights used: 300, 600, 900) -->
   <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;600;900&display=swap" rel="stylesheet">
 
@@ -94,6 +99,8 @@
   </style>
 </head>
 <body>
+    <div class="header" include="./components/header.html"></div>
+
   <main class="wrap" role="main" aria-labelledby="err-heading">
     <h1 id="err-heading" class="error">Error 404</h1>
     <p class="oops">OOPS!</p>
@@ -102,5 +109,8 @@
 
     <a class="cta" href="/">Go Back Home</a>
   </main>
+    <script src="./components/header.js" type="module"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script src="./static/js/inject.js"></script>
 </body>
 </html>
