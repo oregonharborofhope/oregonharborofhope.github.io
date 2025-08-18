@@ -1,28 +1,3 @@
-/* ===== About page – hero under the shared header ===== */
-
-/* Control the thin strip height globally here if you use vars */
-body.about {
-  --header-height: 140px; /* height of the NAV area from header.css */
-}
-
-/* The hero/banner lives BELOW the nav */
-.page-hero.about-hero {
-  /* adjust path to your actual image */
-  background: url('../images/about-banner.png') center/cover no-repeat;
-  min-height: 132px;               /* banner height; tweak to taste */
-  position: relative;
-  z-index: 0;                      /* sits under the nav which is z:2 */
-}
-
-/* Accessibility fallback if you ever put an <img> inside .page-hero */
-.page-hero.about-hero > img { display: none; }
-
-/* IMPORTANT: remove the old override that painted the image on .header */
- /* DELETE any previous rule like:
-    body.about .header { background: ...; height: ...; }
- */
-
-
 body {
   background: var(--background-color);
   margin: 0;
@@ -35,8 +10,39 @@ body, html {
   padding: 0;
 }
 
+body.about .header {
+  background: url('../images/about-banner.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: scroll; /* override 'fixed' */
+  height: auto; /* or whatever height you want */
+}
 
+body.about header {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  position: relative; /* was absolute/fixed on home, change to relative here */
+  top: auto;
+  left: auto;
+  width: 100%;
+  z-index: 100;
+}
 
+body.about nav {
+  display: block;
+}
+
+body.about nav svg {
+  display: block;
+  width: 100vw;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
 
 #about-us-section {
   display: flex;
@@ -320,11 +326,11 @@ body, html {
 }
 
 .team-member h2 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   font-family: var(--primary-font-family);
   color: var(--accent-color); /* Yellow for names */
-  margin: 10px 0 0px 0;
+  margin: 10px 0 5px 0;
 }
 
 .team-member h3 {
@@ -342,7 +348,6 @@ body, html {
   color: var(--text-color);
   text-align: left;
   padding: 0 10px;
-  width : 100%;
 }
 
 /* Tablet adjustments */
